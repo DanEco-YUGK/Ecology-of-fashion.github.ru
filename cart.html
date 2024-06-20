@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <section id="header">
+        <a href="index.html" id="logo"><img src="img/logo.png" class="logo" alt="Логотип"/></a>
+        <div class="nav">
+            <ul id="navbar">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="cart.html"  class="active" id="lg-bag"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <div class="container">
+        <h1>Корзина</h1>
+        <div class="cart">
+            <div class="cart-items" id="cart-items">
+                <!-- Список товаров в корзине будет здесь -->
+            </div>
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="total">0 руб.</span>
+            </div>
+            <div class="cart-buttons">
+                <button class="btn" id="clear-cart">Очистить корзину</button>
+                <button class="btn" id="checkout">Оформить заказ</button>
+            </div>
+        </div>
+        <div class="delivery-details">
+            <h2>Детали доставки</h2>
+            <label for="address">Адрес доставки:</label><br>
+            <input type="text" id="address" name="address"><br>
+            <label for="entrance">Подъезд:</label><br>
+            <input type="text" id="entrance" name="entrance"><br>
+            <label for="floor">Этаж:</label><br>
+            <input type="text" id="floor" name="floor"><br>
+            <label for="apartment">Номер квартиры:</label><br>
+            <input type="text" id="apartment" name="apartment"><br>
+            <label for="phone">Номер телефона:</label><br>
+            <input type="tel" id="phone" name="phone"><br>
+            <label for="payment-method">Способ оплаты:</label><br>
+            <select id="payment-method" name="payment-method">
+                <option value="courier">Курьер с терминалом</option>
+                <option value="cash">Наличными</option>
+            </select><br>
+            <div id="change-section" style="display: none;">
+                <label for="change">Сдача:</label><br>
+                <select id="change" name="change">
+                    <option value="yes">Да</option>
+                    <option value="no">Нет</option>
+                </select><br>
+            </div>
+        </div>
+    </div>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="Логотип"/>
+            <h4>Контакты</h4>
+            <p><strong>Адрес:</strong> Новороссийская улица, 102, Челябинск, 454129</p>
+            <p><strong>Телефон: </strong>+7 (950)-726-23-54</p>
+            <p><strong>Часы работы: </strong> 10:00 - 22:00 Пн-Пт</p>
+            <div class="follow">
+                <h4>Подписывайтесь на нас</h4>
+                <div class="icons">
+                    <a href="https://www.youtube.com/@EcolEduRu" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://vk.com/studsovet_yuralgk" target="_blank"><i class="fab fa-vk"></i></a>
+                    <a href="https://t.me/+R4D5wcqabtozNjRi" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>О нас</h4>
+            <a href="about.html">О нас</a>
+            <a href="privacy.html">Политика конфиденциальности</a>
+            <a href="terms.html">Условия и положения</a>
+            <a href="Dostavka.html">Информация о доставке</a>
+        </div>
+        <div class="col">
+            <h4>Помощь</h4>
+            <a href="cart.html">Просмотр корзины</a>
+            <a href="cart.html">Мой список желаний</a>
+            <a href="Vozvrat.html">Возврат</a>
+            <a href="contact.html">Связаться с нами</a>
+        </div>
+        <div class="col install">
+            <h4>Установите приложение</h4>
+            <p>Из App Store или Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="App Store">
+                <img src="img/pay/play.jpg" alt="Google Play">
+            </div>
+            <p>Безопасные платежные шлюзы</p>
+            <img src="img/pay/pay.png" alt="Платежные шлюзы">
+        </div>
+        <div class="copyright">
+            <p>© Авторские права 2023 от <a href="#">Данил Рахматуллин</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="cart.js"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Получаем корзину из localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Находим элемент, в который будем вставлять товары
+    const cartItemsList = document.getElementById("cart-items");
+
+    // Очищаем элемент перед добавлением новых товаров
+    cartItemsList.innerHTML = "";
+
+    // Перебираем товары в корзине и добавляем их на страницу
+    cart.forEach((item, index) => {
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+
+        const itemInfo = document.createElement("div");
+        itemInfo.classList.add("item-info");
+
+        const itemDetails = document.createElement("div");
+        itemDetails.classList.add("item-details");
+
+        const itemName = document.createElement("span");
+        itemName.classList.add("item-name");
+        itemName.textContent = item.name;
+
+        const itemSize = document.createElement("span");
+        itemSize.classList.add("item-size");
+        itemSize.textContent = `Размер: ${item.size}`;
+
+        const itemPrice = document.createElement("span");
+        itemPrice.classList.add("item-price");
+        itemPrice.textContent = `${item.price} руб.`;
+
+        const removeButton = document.createElement("button");
+        removeButton.classList.add("remove-item");
+        removeButton.textContent = "✖";
+        removeButton.addEventListener("click", function() {
+            removeItemFromCart(index);
+        });
+
+        itemDetails.appendChild(itemName);
+        itemDetails.appendChild(itemSize);
+        itemDetails.appendChild(itemPrice);
+        itemInfo.appendChild(itemDetails);
+        cartItem.appendChild(itemInfo);
+        cartItem.appendChild(removeButton);
+        cartItemsList.appendChild(cartItem);
+    });
+
+    // Функция для удаления товара из корзины
+    function removeItemFromCart(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        location.reload();
+    }
+
+    // Находим кнопку "Очистить корзину"
+    const clearCartButton = document.getElementById("clear-cart");
+    clearCartButton.addEventListener("click", function() {
+        // Очищаем корзину
+        localStorage.removeItem("cart");
+        // Обновляем страницу
+        location.reload();
+    });
+
+    // Обновление общей суммы
+    const totalElement = document.getElementById("total");
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    totalElement.textContent = `${total.toFixed(2)} руб.`;
+
+    // Обработчик изменения способа оплаты
+    document.getElementById("payment-method").addEventListener("change", function() {
+        const selectedOption = this.value;
+        const changeSection = document.getElementById("change-section");
+        if (selectedOption === "cash") {
+            changeSection.style.display = "block";
+        } else {
+            changeSection.style.display = "none";
+        }
+    });
+
+    // Обработчик кнопки "Оформить заказ"
+    document.getElementById("checkout").addEventListener("click", function() {
+        // Получаем значения полей доставки
+        const address = document.getElementById("address").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const entrance = document.getElementById("entrance").value.trim();
+        const floor = document.getElementById("floor").value.trim();
+        const apartment = document.getElementById("apartment").value.trim();
+
+        // Проверяем, заполнены ли все обязательные поля
+        let hasError = false;
+        if (address === "") {
+            document.getElementById("address").style.borderColor = "red";
+            hasError = true;
+        } else {
+            document.getElementById("address").style.borderColor = "";
+        }
+
+        if (phone === "") {
+            document.getElementById("phone").style.borderColor = "red";
+            hasError = true;
+        } else {
+            document.getElementById("phone").style.borderColor = "";
+        }
+
+        if (entrance === "") {
+            document.getElementById("entrance").style.borderColor = "red";
+            hasError = true;
+        } else {
+            document.getElementById("entrance").style.borderColor = "";
+        }
+
+        if (floor === "") {
+            document.getElementById("floor").style.borderColor = "red";
+            hasError = true;
+        } else {
+            document.getElementById("floor").style.borderColor = "";
+        }
+
+        if (apartment === "") {
+            document.getElementById("apartment").style.borderColor = "red";
+            hasError = true;
+        } else {
+            document.getElementById("apartment").style.borderColor = "";
+        }
+
+        // Если есть незаполненные поля, прерываем оформление заказа
+        if (hasError) {
+            alert("Заполните все поля для доставки");
+            return;
+        }
+
+        // Оформление заказа
+        alert("Заказ успешно оформлен!");
+
+        // Очищаем корзину после оформления заказа
+        localStorage.removeItem("cart");
+
+        // Очищаем поля доставки
+        document.getElementById("address").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("entrance").value = "";
+        document.getElementById("floor").value = "";
+        document.getElementById("apartment").value = "";
+
+        // Сбрасываем стили ошибок
+        document.getElementById("address").style.borderColor = "";
+        document.getElementById("phone").style.borderColor = "";
+        document.getElementById("entrance").style.borderColor = "";
+        document.getElementById("floor").style.borderColor = "";
+        document.getElementById("apartment").style.borderColor = "";
+
+        // Опционально: обновляем UI для корзины
+        cartItemsList.innerHTML = "";
+        totalElement.textContent = `0 руб.`;
+
+        // Опционально: скрываем раздел сдачи, если он был открыт
+        document.getElementById("change-section").style.display = "none";
+    });
+
+    // Добавление товара в корзину при нажатии на кнопку "Добавить в корзину"
+    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const name = this.getAttribute("data-name");
+            const size = this.getAttribute("data-size");
+            const price = parseFloat(this.getAttribute("data-price"));
+
+            const item = { name, size, price };
+            cart.push(item);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // При добавлении товара в корзину обновляем список товаров
+            updateCartItems();
+        });
+    });
+
+    // Функция для обновления списка товаров в корзине
+    function updateCartItems() {
+        cartItemsList.innerHTML = "";
+        cart.forEach((item, index) => {
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+
+            const itemInfo = document.createElement("div");
+            itemInfo.classList.add("item-info");
+
+            const itemDetails = document.createElement("div");
+            itemDetails.classList.add("item-details");
+
+            const itemName = document.createElement("span");
+            itemName.classList.add("item-name");
+            itemName.textContent = item.name;
+
+            const itemSize = document.createElement("span");
+            itemSize.classList.add("item-size");
+            itemSize.textContent = `Размер: ${item.size}`;
+
+            const itemPrice = document.createElement("span");
+            itemPrice.classList.add("item-price");
+            itemPrice.textContent = `${item.price} руб.`;
+
+            const removeButton = document.createElement("button");
+            removeButton.classList.add("remove-item");
+            removeButton.textContent = "✖";
+            removeButton.addEventListener("click", function() {
+                removeItemFromCart(index);
+            });
+
+            itemDetails.appendChild(itemName);
+            itemDetails.appendChild(itemSize);
+            itemDetails.appendChild(itemPrice);
+            itemInfo.appendChild(itemDetails);
+            cartItem.appendChild(itemInfo);
+            cartItem.appendChild(removeButton);
+            cartItemsList.appendChild(cartItem);
+        });
+
+        // Обновляем общую сумму
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        totalElement.textContent = `${total.toFixed(2)} руб.`;
+    }
+});
+
+    </script>
+</body>
+</html>

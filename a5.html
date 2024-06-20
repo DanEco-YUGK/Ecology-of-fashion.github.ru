@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шорты "Гармония"</title>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="tovari.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header id="header">
+        <a href="index.html" id="logo"><img src="img/logo.png" class="logo" alt="Логотип"/></a>
+        <div class="nav">
+            <ul id="navbar">
+                <!-- Главная страница -->
+                <li><a href="index.html">Главная</a></li>
+                <!-- Магазин -->
+                <li><a href="shop.html">Магазин</a></li>
+                <!-- О нас -->
+                <li><a href="about.html">О нас</a></li>
+                <!-- Контакты -->
+                <li><a href="contact.html">Контакты</a></li>
+                <!-- Иконка корзины -->
+                <li><a href="cart.html" id="lg-bag"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <!-- Иконка закрытия -->
+                <a id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <!-- Мобильная навигация -->
+        <div class="mobile">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </header>
+
+    <!-- Карточка товара -->
+    <section class="product-detail">
+        <div class="image">
+            <img src="products/a5.png" alt="Шорты 'Гармония'">
+        </div>
+        <div class="info">
+            <h1>Шорты 'Гармония'</h1>
+            <p><strong>Бренд:</strong> TrendyLook</p>
+            <div class="price">3100₽</div>
+            <p><strong>Описание:</strong> Стильные шорты, создающие гармоничный образ для вашего летнего настроения.</p>
+               <div class="sizes">
+                <span>Размеры:</span>
+                <select id="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+            <button onclick="addToCart()">Добавить в корзину</button>
+        </div>
+    </section>
+
+ <footer class="section-p1">
+    <div class="col">
+
+        <img class="logo" src="img/logo.png" alt="Логотип"/>
+
+        <h4>Контакты</h4>
+        <p><strong>Адрес:</strong> Новороссийская улица, 102, Челябинск, 454129</p>
+        <p><strong>Телефон: </strong>+7 (950)-726-23-54</p>
+        <p><strong>Часы работы: </strong> 10:00 - 22:00 Пн-Пт</p>
+
+        <div class="follow">
+            <h4>Подписывайтесь на нас</h4>
+            <div class="icons">
+                <a href="https://www.youtube.com/@EcolEduRu" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://vk.com/studsovet_yuralgk" target="_blank"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/+R4D5wcqabtozNjRi" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+
+        <h4>О нас</h4>
+        <a href="about.html">О нас</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
+        <a href="terms.html">Условия и положения</a>
+        <a href="Dostavka.html">Информация о доставке</a>
+    </div>
+
+    <div class="col">
+       
+        <h4>Помощь</h4>
+        <a href="cart.html">Просмотр корзины</a>
+        <a href="cart.html">Мой список желаний</a>
+        <a href="Vozvrat.html">Возврат</a>
+       <a href="contact.html">Связаться с нами</a>
+    </div>
+
+    <div class="col install">
+
+        <h4>Установите приложение</h4>
+        <p>Из App Store или Google Play</p>
+        <div class="row">
+            <img src="img/pay/app.jpg" alt="App Store">
+            <img src="img/pay/play.jpg" alt="Google Play">
+        </div>
+        <p>Безопасные платежные шлюзы</p>
+        <img src="img/pay/pay.png" alt="Платежные шлюзы">
+    </div>
+
+    <div class="copyright">
+
+        <p>© Авторские права 2023 от <a href="#">Данил Рахматуллин</a></p>
+    </div>
+</footer>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- Скрипт для добавления в корзину -->
+<script>
+        function addToCart() {
+            const name = "Шорты 'Гармония'";
+            const price = 3100;
+            const image = "products/a5.png";
+            const sizeElement = document.getElementById("size");
+            const size = sizeElement.value;
+
+            const item = {
+                name: name,
+                price: price,
+                image: image,
+                size: size,
+                quantity: 1
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(item);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert('Товар добавлен в корзину!');
+        }
+    </script>
+
+</body>
+</html>

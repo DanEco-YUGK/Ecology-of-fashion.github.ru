@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Katalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <section id="header">
+        <!-- Логотип -->
+        <a href="index.html" id="logo"><img src="img/logo.png" class="logo" alt="Логотип"/></a>
+        <!-- Навигация -->
+        <div class="nav">
+            <ul id="navbar">
+                <!-- Главная страница -->
+                    <li><a href="index.html">Главная</a></li>
+                <!-- Магазин -->
+                <li><a href="shop.html" class="active">Магазин</a></li>
+                <!-- О нас -->
+                <li><a href="about.html">О нас</a></li>
+                <!-- Контакты -->
+                <li><a href="contact.html">Контакты</a></li>
+                <!-- Иконка корзины -->
+                <li><a href="cart.html" id="lg-bag"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <!-- Иконка закрытия -->
+                <a id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <!-- Мобильная навигация -->
+        <div class="mobile">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+<!-- Главный раздел магазина -->
+<section id="shop" class="section-p1">
+ 
+    
+<div class="filter-wrapper">
+    <!-- Фильтр ткани -->
+    <div class="filter-item">
+        <label for="fabric-filter">Ткань:</label>
+        <select id="fabric-filter" onchange="filterProducts()">
+            <option value="all">Все</option>
+            <option value="linen">Лён</option>
+            <option value="cotton">Хлопок</option>
+        </select>
+    </div>
+
+    <!-- Фильтр цены -->
+    <div class="filter-item">
+        <label for="min-price">Цена:</label>
+        <input type="number" id="min-price" placeholder="От" min="0">
+        <input type="number" id="max-price" placeholder="До" min="0">
+        <button onclick="filterProducts()">Фильтр</button>
+    </div>
+
+    <!-- Фильтр категорий -->
+    <div class="filter-item">
+        <label for="category-filter">Категория:</label>
+        <select id="category-filter" onchange="filterProducts()">
+            <option value="all">Все</option>
+            <option value="shorts">Шорты</option>
+            <option value="linen-shirts">Льняные рубашки</option>
+            <option value="cotton-shirts">Хлопковые рубашки</option>
+            <option value="linen-pants">Льняные штаны</option>
+        </select>
+    </div>
+</div>
+   <section id="product1" class="section-p1">
+       
+       
+        <!-- Шорты a1 -->
+<div class="pro" data-category="shorts" data-fabric="linen">
+    <a href="a1.html">
+        <img src="products/a1.png" alt="Шорты Летняя свежесть">
+        <div class="des">
+            <span>SummarBreeze</span>
+            <h5>Шорты "Летний бриз"</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>2500₽</h4>
+        </div>
+    </a>
+   </div>
+
+
+        <!-- Шорты a2 -->
+        <div class="pro" data-category="shorts" data-fabric="cotton">
+<a href="a2.html">
+            <img src="products/a2.png" alt="Шорты Морская волна">
+            <div class="des">
+                <span>BeachVibe</span>
+                <h5>Шорты "Морская волна"</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>2500₽</h4>
+            </div>
+              </a>
+               </div>
+
+        <!-- Шорты a3 -->
+      <div class="pro" data-category="shorts" data-fabric="linen">
+           <a href="a3.html">
+            <img src="products/a3.png" alt="Шорты Городские приключения">
+            <div class="des">
+                <span>UrbanStyle</span>
+                <h5>Шорты "Городские приключения"</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>4200₽</h4>
+            </div>
+              </a>
+              </div>
+        
+        <div class="pro" data-category="shorts" data-fabric="linen">
+        <a href="a4.html">
+    <img src="products/a4.png" alt="Шорты Летняя свежесть">
+    <div class="des">
+        <span>CoolBreeze</span>
+        <h5>Шорты "Летняя свежесть"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>2700₽</h4>
+    </div>
+     </a>
+   </div>
+
+<div class="pro" data-category="shorts" data-fabric="cotton">
+   <a href="a5.html">
+    <img src="products/a5.png" alt="Шорты Гармония">
+    <div class="des">
+        <span>TrendyLook</span>
+        <h5>Шорты "Гармония"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>3100₽</h4>
+    </div>
+      </a>
+   </div>
+
+<!-- Шорты a6 -->
+<div class="pro" data-category="shorts" data-fabric="cotton">
+   <a href="a6.html">
+    <img src="products/a6.png" alt="Шорты Отдых">
+    <div class="des">
+        <span>ChillOut</span>
+        <h5>Шорты "Отдых"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>1600₽</h4>
+    </div>
+      </a>
+   </div>
+
+<!-- Шорты a7 -->
+<div class="pro" data-category="shorts" data-fabric="linen">
+   <a href="a7.html">
+    <img src="products/a7.png" alt="Шорты Пляжный отдых">
+    <div class="des">
+        <span>FreshWave</span>
+        <h5>Шорты "Пляжный отдых"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>4800₽</h4>
+    </div>
+      </a>
+    </div>
+
+<!-- Шорты a8 -->
+<div class="pro" data-category="shorts" data-fabric="cotton">
+   <a href="a8.html">
+    <img src="products/a8.png" alt="Шорты Морской ветер">
+    <div class="des">
+        <span>OceanBreeze</span>
+        <h5>Шорты "Морской ветер"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>3300₽</h4>
+    </div>
+      </a>
+   </div>
+   
+   <!-- Рубашка b1 -->
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+   <a href="b1.html">
+    <img src="products/b1.png" alt="Рубашка Элегантный лён">
+    <div class="des">
+        <span>LinenLux</span>
+        <h5>Рубашка "Элегантный лён"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>4999₽</h4>
+    </div>
+      </a>
+  </div>
+
+<!-- Рубашка b2 -->
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+    <a href="b2.html">
+    <img src="products/b2.png" alt="Рубашка Свежий ветер">
+    <div class="des">
+        <span>BreezeWear</span>
+        <h5>Рубашка "Свежий ветер"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>4800₽</h4>
+    </div>
+      </a>
+    </div>
+
+<!-- Рубашка b3 -->
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+    <a href="b3.html">
+    <img src="products/b3.png" alt="Рубашка Природный комфорт">
+    <div class="des">
+        <span>NaturalComfort</span>
+        <h5>Рубашка "Природный комфорт"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>5400₽</h4>
+    </div>
+      </a>
+
+</div>
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+    <a href="b4.html">
+    <img src="products/b4.png" alt="Рубашка Летняя прохлада">
+    <div class="des">
+        <span>SummerCool</span>
+        <h5>Рубашка "Летняя прохлада"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>3600₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<!-- Рубашка b5 -->
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+    <a href="b5.html">
+    <img src="products/b5.png" alt="Рубашка Лёгкость">
+    <div class="des">
+        <span>RelaxFit</span>
+        <h5>Рубашка "Лёгкость"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>4650₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<!-- Рубашка b6 -->
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+    <a href="b6.html">
+    <img src="products/b6.png" alt="Рубашка Чистый лён">
+    <div class="des">
+        <span>PureLinen</span>
+        <h5>Рубашка "Чистый лён"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>6100₽</h4>
+    </div>
+      </a>
+
+</div>
+<!-- Рубашка b7 -->
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+    <a href="b7.html">
+    <img src="products/b7.png" alt="Рубашка Классика">
+    <div class="des">
+        <span>ClassicLinen</span>
+        <h5>Рубашка "Классика"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>1500₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<!-- Рубашка b8 -->
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+   <a href="b8.html">
+      <img src="products/b8.png" alt="Рубашка Тренд">
+    <div class="des">
+        <span>LinenTrend</span>
+        <h5>Рубашка "Тренд"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>2300₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<!-- Рубашка b9 -->
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+    <a href="b9.html">
+    <img src="products/b9.png" alt="Рубашка Экологичный стиль">
+    <div class="des">
+        <span>EcoWear</span>
+        <h5>Рубашка "Экологичный стиль"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>4000₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<!-- Рубашка b10 -->
+<div class="pro" data-category="linen-shirts" data-fabric="linen">
+    <a href="b10.html">
+    <img src="products/b10.png" alt="Рубашка Мягкость">
+    <div class="des">
+        <span>SoftLinen</span>
+        <h5>Рубашка "Мягкость"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>3900₽</h4>
+    </div>
+      </a>
+
+</div>
+   
+   <!-- Рубашка c1 -->
+<div class="pro" data-category="cotton-shirts" data-fabric="cotton">
+    <a href="c1.html">
+    <img src="products/c1.png" alt="Рубашка Уютный хлопок">
+    <div class="des">
+        <span>CottonStyle</span>
+        <h5>Рубашка "Уютный хлопок"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>3000₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<!-- Рубашка c2 -->
+<div class="pro" data-category="cotton-shirts" data-fabric="cotton">
+   <a href="c2.html">
+    <img src="products/c2.png" alt="Рубашка Чистый комфорт">
+    <div class="des">
+        <span>PureComfort</span>
+        <h5>Рубашка "Чистый комфорт"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>2600₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<!-- Рубашка c3 -->
+<div class="pro" data-category="cotton-shirts" data-fabric="cotton">
+   <a href="c3.html">
+    <img src="products/c3.png" alt="Рубашка Повседневный стиль">
+    <div class="des">
+        <span>CasualCotton</span>
+        <h5>Рубашка "Повседневный стиль"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>2800₽</h4>
+    </div>
+      </a>
+  
+</div>
+
+<!-- Рубашка c4 -->
+<div class="pro" data-category="cotton-shirts" data-fabric="cotton">
+   <a href="c4.html">
+    <img src="products/c4.png" alt="Рубашка Мягкий прикосновение">
+    <div class="des">
+        <span>SoftTouch</span>
+        <h5>Рубашка "Мягкий прикосновение"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>3050₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<!-- Рубашка c5 -->
+<div class="pro" data-category="cotton-shirts" data-fabric="cotton">
+   <a href="c5.html">
+    <img src="products/c5.png" alt="Рубашка Шик">
+    <div class="des">
+        <span>CottonChic</span>
+        <h5>Рубашка "Шик"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>2100₽</h4>
+    </div>
+      </a>
+</div>
+
+<!-- Рубашка c6 -->
+<div class="pro" data-category="cotton-shirts" data-fabric="cotton">
+   <a href="c6.html">
+    <img src="products/c6.png" alt="Рубашка Свежий хлопок">
+    <div class="des">
+        <span>FreshCotton</span>
+        <h5>Рубашка "Свежий хлопок"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>4400₽</h4>
+    </div>
+      </a>
+ 
+</div>
+
+<!-- Рубашка c7 -->
+<div class="pro" data-category="cotton-shirts" data-fabric="cotton">
+   <a href="c7.html">
+    <img src="products/c7.png" alt="Рубашка Тренд">
+    <div class="des">
+        <span>TrendyCotton</span>
+        <h5>Рубашка "Тренд"</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>3700₽</h4>
+    </div>
+      </a>
+   
+</div>
+
+<!-- Льняные штаны b1 -->
+ <div class="pro" data-category="linen-pants" data-fabric="linen">
+   <a href="d1.html">
+    <img src="products/d1.png" alt="Льняные штаны CoolLinen">
+    <div class="des">
+        <span>CoolLinen</span>
+        <h5>Льняные штаны</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>7200₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<!-- Льняные штаны b2 -->
+ <div class="pro" data-category="linen-pants" data-fabric="linen">
+<a href="d2.html">
+    <img src="products/d2.png" alt="Льняные штаны CoolLinen">
+    <div class="des">
+        <span>CoolLinen</span>
+        <h5>Льняные штаны</h5>
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <h4>4990₽</h4>
+    </div>
+      </a>
+
+</div>
+
+<footer class="section-p1">
+    <div class="col">
+
+        <img class="logo" src="img/logo.png" alt="Логотип"/>
+
+        <h4>Контакты</h4>
+        <p><strong>Адрес:</strong> Новороссийская улица, 102, Челябинск, 454129</p>
+        <p><strong>Телефон: </strong>+7 (950)-726-23-54</p>
+        <p><strong>Часы работы: </strong> 10:00 - 22:00 Пн-Пт</p>
+
+        <div class="follow">
+            <h4>Подписывайтесь на нас</h4>
+            <div class="icons">
+                <a href="https://www.youtube.com/@EcolEduRu" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://vk.com/studsovet_yuralgk" target="_blank"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/+R4D5wcqabtozNjRi" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+
+        <h4>О нас</h4>
+        <a href="about.html">О нас</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
+        <a href="terms.html">Условия и положения</a>
+        <a href="Dostavka.html">Информация о доставке</a>
+    </div>
+
+    <div class="col">
+       
+        <h4>Помощь</h4>
+        <a href="cart.html">Просмотр корзины</a>
+        <a href="cart.html">Мой список желаний</a>
+        <a href="Vozvrat.html">Возврат</a>
+       <a href="contact.html">Связаться с нами</a>
+    </div>
+
+    <div class="col install">
+
+        <h4>Установите приложение</h4>
+        <p>Из App Store или Google Play</p>
+        <div class="row">
+            <img src="img/pay/app.jpg" alt="App Store">
+            <img src="img/pay/play.jpg" alt="Google Play">
+        </div>
+        <p>Безопасные платежные шлюзы</p>
+        <img src="img/pay/pay.png" alt="Платежные шлюзы">
+    </div>
+
+    <div class="copyright">
+
+        <p>© Авторские права 2023 от <a href="#">Данил Рахматуллин</a></p>
+    </div>
+</footer>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>
+    function filterProducts() {
+    // Получаем значения фильтров
+    const selectedFabric = document.getElementById('fabric-filter').value;
+    const minPrice = parseFloat(document.getElementById('min-price').value) || 0;
+    const maxPrice = parseFloat(document.getElementById('max-price').value) || Infinity;
+    const selectedCategory = document.getElementById('category-filter').value;
+
+    // Получаем все товары
+    const products = document.querySelectorAll('.pro');
+
+    products.forEach(product => {
+        // Получаем атрибуты товара
+        const productFabric = product.getAttribute('data-fabric');
+        const productCategory = product.getAttribute('data-category');
+        const productPrice = parseFloat(product.querySelector('.des h4').textContent.replace(/[^0-9]/g, ''));
+
+        // Логика фильтрации
+        let matchesFabric = (selectedFabric === 'all' || productFabric === selectedFabric);
+        let matchesPrice = (productPrice >= minPrice && productPrice <= maxPrice);
+        let matchesCategory = (selectedCategory === 'all' || productCategory === selectedCategory);
+
+        // Устанавливаем видимость товара
+        if (matchesFabric && matchesPrice && matchesCategory) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+</script>
+    <!-- Скрипт для корзины -->
+  <script src="cart.js"></script>
+</body>
+</html>
